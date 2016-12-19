@@ -20,6 +20,15 @@ INSTALLED_APPS = (
 ```
 
 ### Settings list
+All settings are contained in a `DJAPNS` dict.
+
+- `ENABLE_ADMIN` (default=True) - Whether to enable Admin interface of not.
+- `ENABLED` (default=True) - Do not send push notifications, but only logs the messages to console useful for testing purposes.
+
+- `USE_SANDBOX` (default=True)
+- `CERT_SANDBOX_FILE` (default=None)
+- `CERT_PRODUCTION_FILE` (default=None)
+
 
 ## Sending messages
 
