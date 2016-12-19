@@ -29,14 +29,30 @@ All settings are contained in a `DJAPNS` dict.
 - `CERT_SANDBOX_FILE` (default=None)
 - `CERT_PRODUCTION_FILE` (default=None)
 
+# Flow
+
+- Attach a device to user a (or `anonymous` user). A user can have multiple devices attached to at the same time.
+- Now select the user(s) you want to send notification to via normal django queryset.
+- Use djapns functions to either send a single notification or notification in bulk.
+- When a user logs out the app, call the `deregister_ios_device` function to disassociate a user from his/her device.
+
 
 ## Sending messages
 
-TODO
+```
+import djapns
+
+djapns.send_push_notification(user, ...)
+```
 
 ## Sending bulk messages
 
-TODO
+```
+import djapns
+
+djapns.send_bulk_push_notification(users, ...)
+```
+
 
 ## Administration
 
